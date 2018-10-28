@@ -1,0 +1,46 @@
+.navbar-login
+{
+    width: 305px;
+    padding: 10px;
+    padding-bottom: 0px;
+}
+
+.navbar-login-session
+{
+    padding: 10px;
+    padding-bottom: 0px;
+    padding-top: 0px;
+}
+
+.icon-size
+{
+    font-size: 87px;
+}
+a:hover{
+    cursor:pointer;
+}
+
+.dropdown{
+    background-color: white;
+
+}
+.navbar-nav{
+    background-clip: border-box;
+}
+
+.dropdown:hover{
+    background-color:grey;    
+}
+
+.navbar-fixed-top{
+    margin-bottom: 20px;
+}
+
+.r-container{
+    position: relative;
+    top: 75px;
+}
+
+.navbar-right{
+    width:30%;
+}

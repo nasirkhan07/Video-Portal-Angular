@@ -1,0 +1,24 @@
+<div id="fullscreen_bg" class="fullscreen_bg"></div>
+<div class="form-signin">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-4 col-md-offset-4">
+        <div class="panel panel-default">
+          <div class="panel-body">
+            <h3 class="text-center">
+              Create Account </h3>
+            <form #sform="ngForm">
+
+              <div class="">
+                <label><b>Username</b></label>
+                <input type="text" placeholder="Enter Username" name="uname" [(ngModel)]="userCreds.username" required>
+                <label><b>Password</b></label>
+                <input type="password" placeholder="Enter Password" [(ngModel)]="userCreds.password" name="psw" required>
+
+                <button type="submit" [disabled]="sform.invalid" (click)="signup()">Sign Up</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>

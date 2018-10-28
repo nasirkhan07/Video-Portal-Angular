@@ -1,0 +1,25 @@
+<div *ngIf="videos" class='container-fluid' id="content-container" #container>
+    <div *ngFor="let video of videos" class='video-container col-md-3 col-sm-4 col-xs-12'>
+        <a [routerLink]="'/videos/'+video._id" [title]="video?.description" dir="ltr">
+            {{video?.name}}</a>
+        <video (click)="normalizeVideoPlay(video)" id="{{video?._id}}" #vid width="75%" height="80%" preload="none" [poster]="'/posters/'+video?.url?.slice(video?.url.indexOf('/')+1,video?.url?.lastIndexOf('.'))+'.gif'"
+            controls (play)="normalizeVideoPlay(video)">
+            <source [src]="'/'+video?.url" type="video/mp4">
+        </video>
+        <app-rating (rate)="rateVideo(video?._id, $event)" [rating]="average(video?.ratings)" [starCount]="average(video?.ratings)">
+        </app-rating>
+        <span>
+            {{video?.description}}
+        </span>
+
+    </div>
+    <div class="spinner-container" *ngIf="lazyLoading">
+        <spinner>
+        </spinner>
+    </div>
+
+</div>
+<div class="spinner-container" *ngIf="isLoading">
+    <spinner>
+    </spinner>
+</div>

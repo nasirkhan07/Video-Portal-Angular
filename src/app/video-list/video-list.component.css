@@ -1,0 +1,35 @@
+.video-container{
+/* margin-bottom: 20px; */
+margin-bottom: 35px;
+}
+
+.video-container a{
+    display: inline-block;
+    max-height: 50px;
+    overflow: hidden;
+    white-space: nowrap;
+    width: 20em;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    word-wrap: break-word;
+    word-break: break-all;
+}
+
+span{
+     display: inline-block;
+    max-height: 50px;
+    overflow: hidden;
+    white-space: nowrap;
+    width: 20em;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    word-wrap: break-word;
+    word-break: break-all;
+    font-size: 12px;
+}
+
+.spinner-container {
+    position: absolute;
+    left:45%;
+    top:50%;
+}

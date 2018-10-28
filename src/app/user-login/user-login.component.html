@@ -1,0 +1,21 @@
+<form #lform="ngForm">
+
+  <div class="container">
+    <p *ngIf="loginErrMsg" class="danger" [style.color]="'red'">
+      {{loginErrMsg}}
+    </p>
+    <label><b>Username</b></label>
+    <input type="text" placeholder="Enter Username" name="uname" [(ngModel)]="userCreds.username" required>
+
+    <label><b>Password</b></label>
+    <input type="password" placeholder="Enter Password" [(ngModel)]="userCreds.password" name="psw" required>
+
+    <button type="submit" [disabled]="lform.invalid" (click)="login()">Login</button>
+    <input type="checkbox" checked="checked"> Remember me
+  </div>
+
+  <div class="container" style="background-color:#f1f1f1">
+    <button type="button" class="cancelbtn">Cancel</button>
+    <span class="psw"> Dont have Account?  <a routerLink="/signup"> <strong> Create New Account</strong> </a> </span>
+  </div>
+</form>

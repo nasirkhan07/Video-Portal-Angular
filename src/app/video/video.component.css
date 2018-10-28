@@ -1,0 +1,22 @@
+.video-container{
+max-width: 80%;
+max-height:80%;
+}
+
+.video-container a{
+    display: block;
+}
+
+span{
+     display: inline-block;
+     font-size: 12px;
+}
+.vid-list-container{
+        height: 800px;
+    overflow: auto;
+}
+.spinner-container {
+    position: absolute;
+    left:45%;
+    top:50%;
+}

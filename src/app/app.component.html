@@ -1,3 +1,38 @@
-<h1>
-  {{title}}
-</h1>
+<div class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            </button>
+        <a href="#" class="navbar-brand">
+            <strong>
+                Crossover Video Portal
+            </strong>
+        </a>
+    </div>
+    <div class="container">
+        <div class="collapse navbar-collapse">
+            <ul class="nav navbar-nav">
+                <li><a routerLink="/videos">
+                <strong> See All Videos </strong>    
+                </a></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li *ngIf="userName" class="greet">
+                    <a>
+             <b>     Hi , {{userName | uppercase}}</b>
+                   </a>
+                </li>
+                <li class="dropdown">
+                    <a (click)="loginout()" class="dropdown-toggle" data-toggle="dropdown">
+                        <span class="glyphicon glyphicon-user"></span> 
+                        <strong>{{loginText}}</strong>
+                        <!-- <span class="glyphicon glyphicon-chevron-down"></span> -->
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+<div class="r-container">
+    <router-outlet>
+    </router-outlet>
+</div>

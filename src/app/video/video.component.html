@@ -1,0 +1,47 @@
+<div  class='col-md-offset-1 col-md-8'>
+  <div class='video-container'>
+    <a hred="#" [title]="video?.description" dir="ltr">
+            {{video?.name}}</a>
+    <video *ngIf="video" (click)="togglePlay(video)" id="{{video?._id}}" #vid width="100%" height="100%"
+     [poster]="'/posters/'+video?.url?.slice(video?.url.indexOf('/')+1,video?.url?.lastIndexOf('.'))+'.gif'"
+      autoplay controls>
+      <source [src]="'/'+video?.url" type="video/mp4">
+      <!-- <source src="movie.ogg" type="video/ogg"> Your browser does not support the video tag. -->
+    </video>
+    <app-rating *ngIf="video" [rating]="average(video?.ratings)" (rate)="rateVideo(video?._id, $event)" [starCount]="average(video?.ratings)">
+    </app-rating>
+    <span>
+            {{video?.description}}
+        </span>
+    <!-- <button type="button" (click)="toggleDesc(video)" > {{ video.height=='20px'?'Show More':'Show Less'}}</button> -->
+  </div>
+</div>
+<div class='vid-list-container col-md-3'>
+  <div *ngFor="let video of videos" class='col-md-12'>
+    <a [routerLink]="'/videos/'+video._id" [title]="video?.description" dir="ltr">
+            {{video?.name}}</a>
+    <video #vids width="75%" height="80%" preload="none" 
+    (play)="router.navigate(['/videos/'+video?._id])"
+    [poster]="'/posters/'+video?.url?.slice(video?.url.indexOf('/')+1,video?.url?.lastIndexOf('.'))+'.gif'"
+    controls>
+      <source [src]="'/'+video?.url" type="video/mp4">
+      <!-- <source src="movie.ogg" type="video/ogg"> Your browser does not support the video tag. -->
+    </video>
+    <app-rating [rating]="average(video?.ratings)" (rate)="rateVideo(video?._id, $event)" [starCount]="average(video?.ratings)">
+    </app-rating>
+    <span>
+            {{video?.description}}
+        </span>
+    <!-- <button type="button" (click)="toggleDesc(video)" > {{ video.height=='20px'?'Show More':'Show Less'}}</button> -->
+
+  </div>
+   <div class="spinner-container" *ngIf="isMultiLoading">
+        <spinner>
+        </spinner>
+    </div>
+</div>
+
+ <div class="spinner-container" *ngIf="isLoading">
+        <spinner>
+        </spinner>
+    </div>

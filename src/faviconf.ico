@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg version="1.1" id="ciLoader" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 38 38" style="enable-background:new 0 0 38 38;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:url(#SVGID_1_);}
+</style>
+<linearGradient id="SVGID_1_" gradientUnits="userSpaceOnUse" x1="19" y1="-0.0521" x2="19" y2="38.0521">
+	<stop  offset="0" style="stop-color:#FFFFFF"/>
+	<stop  offset="1" style="stop-color:#A7A7A7"/>
+</linearGradient>
+<circle class="st0" cx="19" cy="19" r="19.052"/>
+<path d="M19.291,28.951c-5.303,0-9.332-4.374-9.332-9.952c0-5.613,3.994-9.952,9.332-9.952c3.271,0,5.544,1.377,7.576,3.306
+	l1.79-1.928c-2.411-2.273-4.959-3.891-9.332-3.891C12.232,6.533,7.135,12.181,7.135,19c0,6.991,5.131,12.466,12.087,12.466
+	c4.374,0,7.129-1.55,9.642-4.098l-1.79-1.894C24.767,27.677,22.597,28.951,19.291,28.951z"/>
+</svg>
